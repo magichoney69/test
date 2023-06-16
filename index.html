@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            height: 200px;
+            width: 200px;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+
+<!-- Сделать так чтоб при нажатии разных кнопок мвши блок менял цвет
+Убрать меню при нажатии правой кнопки -->
+</body>
+<script>
+    d1.onmousedown = function(e) {
+        let bgColor
+        switch(e.which) {
+            case 1: 
+                bgColor = 'lime'
+                break
+            case 2:
+                bgColor = 'aqua'
+                break
+            case 3:
+                bgColor = 'tomato'
+                break
+        }
+        d1.style.backgroundColor = bgColor
+    }
+d1.oncontextmenu = function() {
+    return false
+}
+</script>
+</html>
